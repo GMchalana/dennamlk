@@ -23,7 +23,7 @@ export default function DesktopMenu(props: { finishedLoading: boolean }) {
        
       >
         <ReactScrollLink to="aboutSection" spy={true} smooth={true} offset={-100} duration={200}>
-          &gt; 01. <span className="text-white hover:cursor-pointer hover:text-AAsecondary duration-300">About</span>
+          <span className="text-lg text-black hover:cursor-pointer hover:text-AAsecondary duration-300">About</span>
         </ReactScrollLink>
       </motion.div>
       <motion.div
@@ -44,8 +44,8 @@ export default function DesktopMenu(props: { finishedLoading: boolean }) {
        
       >
         <ReactScrollLink to="WhereIhaveWorkedSection" spy={true} smooth={true} offset={-300} duration={200}>
-          &gt; 02.{" "}
-          <span className="text-white  hover:cursor-pointer hover:text-AAsecondary duration-300">Experience</span>
+          
+          <span className="text-lg text-black  hover:cursor-pointer hover:text-AAsecondary duration-300">Services</span>
         </ReactScrollLink>
       </motion.div>
       <motion.div
@@ -65,7 +65,31 @@ export default function DesktopMenu(props: { finishedLoading: boolean }) {
         className="text-AAsecondary"
       >
         <ReactScrollLink to="SomethingIveBuiltSection" spy={true} smooth={true} offset={-100} duration={200}>
-        &gt; 03. <span className="text-white  hover:cursor-pointer hover:text-AAsecondary duration-300">Work</span>
+        <span className="text-lg text-black  hover:cursor-pointer hover:text-AAsecondary duration-300">Our Works
+</span>
+
+        </ReactScrollLink>
+        
+      </motion.div>
+      <motion.div
+        initial={{
+          y: -40,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          type: "spring",
+          duration: props.finishedLoading ? 0 : 1.2,
+          delay: props.finishedLoading ? 0 : 9.8,
+        }}
+        className="text-AAsecondary"
+      >
+        <ReactScrollLink to="SomethingIveBuiltSection" spy={true} smooth={true} offset={-100} duration={200}>
+        <span className="text-lg text-black  hover:cursor-pointer hover:text-AAsecondary duration-300">Blogs
+</span>
 
         </ReactScrollLink>
         
@@ -87,10 +111,12 @@ export default function DesktopMenu(props: { finishedLoading: boolean }) {
         className="text-AAsecondary"
       >
          <ReactScrollLink to="GetInTouchSection" spy={true} smooth={true} offset={-100} duration={200}>
-         &gt; 04. <span className="text-white  hover:cursor-pointer hover:text-AAsecondary duration-300">Contact</span>
+        <span className="text-lg text-black  hover:cursor-pointer hover:text-AAsecondary duration-300">Contacts</span>
         </ReactScrollLink>
+
+        
       </motion.span>
-      <a href={"/resume.pdf"} target={"_blank"} rel="noreferrer">
+      {/* <a href={"/resume.pdf"} target={"_blank"} rel="noreferrer">
       <motion.button
         initial={{
           y: -40,
@@ -110,7 +136,7 @@ export default function DesktopMenu(props: { finishedLoading: boolean }) {
       >
         Resume
       </motion.button>
-      </a>
+      </a> */}
       
     </div>
   );
